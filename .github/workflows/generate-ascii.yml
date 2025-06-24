@@ -10,8 +10,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Install Cowsay Program
-        run: sudo apt-get update && sudo apt-get install cowsay -y
+      - name: Update APT and Install Cowsay
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cowsay
+          which cowsay
+          cowsay --version || echo "cowsay installed successfully"
 
       - name: Execute Cowsay CMD
         run: cowsay -f dragon "Run for cover, I am a Dragon...RAWR" > dragon.txt
