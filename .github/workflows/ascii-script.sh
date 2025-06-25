@@ -1,6 +1,6 @@
-#/bin/sh
-sudo pat-get install cowsay -y
-cowsay -f dragon  "RUN for cover, I am a DRAGON....RAWR" >> dragon.txt
-grep -i "dragon"  dragon.txt
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install -y cowsay
+cowsay -f dragon "Run for cover, I am a Dragon...RAWR" > dragon.txt
 cat dragon.txt
-ls  -ltra
