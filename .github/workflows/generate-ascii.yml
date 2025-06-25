@@ -48,6 +48,6 @@ jobs:
         
       - name: Executing Shell Script
         run: |
-         chmod +x scripts/ascii-script.sh 
-          ./scripts/ascii-script.sh
+         chmod +x ascii-script.sh 
+          ./ascii-script.sh
 
